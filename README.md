@@ -1,6 +1,10 @@
 # docsearcx
 docsearcx is a simple search engine that retrives information from ***pdfs*** based on term frequency-inverse Document frequency and cosine similarity to retrive relevant documents.
 
+
+## Limitation
+For the sake of POC this application relies on in memory storage that.
+
 ---
 
 ### Term Frequency-inverse Document Frequency
