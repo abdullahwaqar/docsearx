@@ -19,4 +19,9 @@ def enumrateFilenames() -> List:
             filenameList.append('{}/{}'.format(dirpath, name))
     return filenameList
 
-print(enumrateFilenames())
+def numberOfFiles() -> int:
+    """
+    * @desc: Return number of files in the storage
+    * @return: int -> Number of files
+    """
+    return len(enumrateFilenames())
