@@ -4,7 +4,7 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
         <div class="container has-text-centered">
-        <h1 href="/" class="title logo-font">docsearx</h1>
+        <h1 class="title logo-font"><i class="fab fa-searchengin"></i> docsearx</h1>
         <h2 class="subtitle">
             A minimal document search engine.
         </h2>

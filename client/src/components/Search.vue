@@ -1,18 +1,17 @@
 <template>
     <section class="section">
-        <div v-if="error" class="notification is-danger">
-        <button @click="error = ''" class="delete"></button>
-        {{ error }}
-        </div>
         <div class="columns">
             <div class="column is-half is-offset-one-quarter">
-            <div class="control">
-                <input v-model="searchTerm" class="input is-medium is-rounded" type="email" placeholder="Enter Search Term...">
-            </div>
-            </div>
-        </div>
-        <br>
-        <button @click="search" class="button is-medium is-primary is-capitalized">Search</button>
+                <div class="field is-grouped">
+                    <div class="control is-expanded">
+                        <input v-model="searchTerm" class="input is-primary is-medium is-rounded" type="email" placeholder="Enter Search Term...">
+                    </div>
+                    <div class="control">
+                        <button @click="search" class="button is-medium is-primary is-capitalized is-rounded"><i class="fas fa-search"></i>Search</button>
+                    </div>
+                </div>
+                </div>
+                </div>
     </section>
 </template>
 
