@@ -68,7 +68,6 @@ class Engine:
     def compute_tfidf(self):
         """
         * @desc: Compute and store TF-IDF values for words and documents.
-        *
         """
         self.tfidf = {}
         idf = {}
