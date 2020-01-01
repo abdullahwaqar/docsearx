@@ -3,7 +3,7 @@ docsearcx is a simple search engine that retrives information from ***pdfs*** ba
 
 
 ## Limitation
-For the sake of POC this application relies on in memory storage that.
+For the sake of POC this application relies on in memory storage.
 
 ---
 
