@@ -1,4 +1,6 @@
 # docsearcx | A minimal document search engine.
+![alt text](https://github.com/abdullahwaqar/docsearx/blob/master/docs/Screenshot.png "Web App Screenshot")
+
 docsearcx is a simple search engine that retrives information from ***pdfs*** based on term frequency-inverse Document frequency and cosine similarity to retrive relevant documents.
 
 
@@ -12,6 +14,7 @@ For the sake of POC this application relies on in memory storage.
 If pipenv is already installed skip this step.
 
 ```pip install pipenv```
+
 
 ### Installing Dependencies
 
