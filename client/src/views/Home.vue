@@ -9,6 +9,7 @@
             A minimal document search engine.
         </h2>
         <search-bar></search-bar>
+        <p><a>{{ numberOfDoc }}</a> documents indexed.</p>
         </div>
     </div>
     </section>
@@ -16,12 +17,23 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
+
 import Search from '@/components/Search.vue';
 
 export default {
     name: 'home',
     components: {
         'search-bar': Search
+    },
+    computed: {
+        ...mapGetters({ numberOfDoc: 'getNumberOfIndexedDocumnets' })
+    },
+    mounted: function() {
+        this.ping();
+    },
+    methods: {
+        ...mapActions({ ping: 'pingServer' })
     }
 }
 </script>
