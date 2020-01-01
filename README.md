@@ -1,4 +1,4 @@
-# docsearcx
+# docsearcx | A minimal document search engine.
 docsearcx is a simple search engine that retrives information from ***pdfs*** based on term frequency-inverse Document frequency and cosine similarity to retrive relevant documents.
 
 
