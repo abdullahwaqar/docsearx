@@ -28,6 +28,16 @@ If pipenv is already installed skip this step.
 
 ```python app.py```
 
+### Running Client
+
+```
+cd client/
+
+npm install
+
+npm run serve
+```
+
 ---
 
 ### Term Frequency-inverse Document Frequency

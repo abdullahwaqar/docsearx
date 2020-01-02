@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
+import router from '../router';
 
 Vue.use(Vuex);
 
@@ -9,16 +10,22 @@ const BASE_URL = `http://127.0.0.1:5000/api`;
 export default new Vuex.Store({
     state: {
         numberOfIndexedDocumnets: 0,
-        searcResult: []
+        searcResults: null
     },
     mutations: {
         setNumberOfIndexedDocumnets(state, number) {
             state.numberOfIndexedDocumnets = number;
+        },
+        setSearchResults(state, results) {
+            state.searcResults = results;
         }
     },
     getters: {
         getNumberOfIndexedDocumnets(state) {
             return state.numberOfIndexedDocumnets;
+        },
+        getSearchResults(state) {
+            return state.searcResults;
         }
     },
     actions: {
@@ -31,7 +38,14 @@ export default new Vuex.Store({
             }
         },
         async search({ commit }, query) {
-
+            try {
+                const SEARCH_URL = `/search?q=`;
+                const response = await axios.get(`${BASE_URL}${SEARCH_URL}${query}`);
+                commit('setSearchResults', response.data);
+                router.push('/result')
+            } catch (error) {
+                console.error(error);
+            }
         },
     }
 });

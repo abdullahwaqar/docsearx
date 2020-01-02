@@ -192,7 +192,7 @@ class Engine:
 
         ranking = [idx for idx, sim in sorted(enumerate(scores), key = lambda xx : xx[1], reverse = True)]
         results = []
-        for i in range(10):
+        for i in range(20):
             results.append((ranking[i], scores[ranking[i]]))
         return results
 
