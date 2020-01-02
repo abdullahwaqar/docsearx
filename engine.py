@@ -166,6 +166,8 @@ class Engine:
     def rank_retrieve(self, query):
         """
         * @desc: Given a query (a list of words), return a rank-ordered list of documents (by ID) and score for the query.
+        * @return: List of rank ordered list
+        *@ ref: https://stackoverflow.com/questions/22724164/cosine-similarity-python
         """
         scores = [0.0 for xx in range(len(self.docs))]
 
