@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
+import router from '../router';
 
 Vue.use(Vuex);
 
@@ -9,8 +10,7 @@ const BASE_URL = `http://127.0.0.1:5000/api`;
 export default new Vuex.Store({
     state: {
         numberOfIndexedDocumnets: 0,
-        searcResults: null,
-        currentQuery: ''
+        searcResults: null
     },
     mutations: {
         setNumberOfIndexedDocumnets(state, number) {
@@ -42,6 +42,7 @@ export default new Vuex.Store({
                 const SEARCH_URL = `/search?q=`;
                 const response = await axios.get(`${BASE_URL}${SEARCH_URL}${query}`);
                 commit('setSearchResults', response.data);
+                router.push('/result')
             } catch (error) {
                 console.error(error);
             }

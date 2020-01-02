@@ -6,7 +6,10 @@
         <div class="container has-text-centered">
         <a href="/" class="title logo-font"><i class="fab fa-searchengin"></i> docsearx</a>
         <search-bar></search-bar>
-        <!-- <p><a>{{ numberOfDoc }}</a> documents indexed.</p> -->
+        <div v-if="query != null">
+            <results></results>
+            <br>
+        </div>
         </div>
     </div>
     </section>
@@ -17,20 +20,16 @@
 import { mapActions, mapGetters } from 'vuex';
 
 import Search from '@/components/Search.vue';
+import Results from '@/components/Results.vue';
 
 export default {
     name: 'result',
     components: {
-        'search-bar': Search
+        'search-bar': Search,
+        'results': Results
     },
     computed: {
-        ...mapGetters({ numberOfDoc: 'getNumberOfIndexedDocumnets' })
-    },
-    mounted: function() {
-        this.ping();
-    },
-    methods: {
-        ...mapActions({ ping: 'pingServer' })
+        ...mapGetters({ query: 'getSearchResults' })
     }
 }
 </script>

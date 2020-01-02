@@ -10,8 +10,8 @@
                         <button @click="invokeSearch" class="button is-medium is-primary is-capitalized is-rounded"><i class="fas fa-search"></i>Search</button>
                     </div>
                 </div>
-                </div>
-                </div>
+            </div>
+        </div>
     </section>
 </template>
 
