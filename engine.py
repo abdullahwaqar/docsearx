@@ -52,8 +52,7 @@ class Engine:
         titles, docs = self.read_raw_data()
         #* Sort document alphabetically by title to ensure we have the proper
         #* document indices when referring to them.
-        ordering = [idx for idx, title in sorted(enumerate(titles),
-        key = lambda xx : xx[1])]
+        ordering = [idx for idx, title in sorted(enumerate(titles), key = lambda xx : xx[1])]
 
         self.titles = []
         self.docs = []
