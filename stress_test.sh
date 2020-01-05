@@ -1,0 +1,1 @@
+curl -w "@curl-format.txt" -o /dev/null -s "http://127.0.0.1:5000/api/search?q=Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance%Cloud%compute%instance"
