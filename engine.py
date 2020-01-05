@@ -3,7 +3,8 @@ import re
 import math
 import collections
 from nltk import PorterStemmer
-from pdf_reader import readAllPdf
+from pdf_reader import readAllPdf, readPdf
+from cosine_test import get_cosine, text_to_vector
 
 class Engine:
 
@@ -131,9 +132,7 @@ class Engine:
         #* Return the list of the given word
         posting = self.inv_index[word]
         set(posting)
-        sorted(posting)
-
-        return posting
+        return sorted(posting)
 
     def get_posting_unstemmed(self, word):
         """
@@ -233,6 +232,7 @@ def main(args):
     query = " ".join(args)
     print("Best matching documents to '%s':" % query)
     results = engine.query_rank(query)
+    raw = engine.read_raw_data()
     for docId, score in results:
         print("%s: %e" % (engine.titles[docId], score))
 
