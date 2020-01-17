@@ -232,9 +232,8 @@ def main(args):
     query = " ".join(args)
     print("Best matching documents to '%s':" % query)
     results = engine.query_rank(query)
-    raw = engine.read_raw_data()
     for docId, score in results:
-        print("%s: %e" % (engine.titles[docId], score))
+        print("%s: %e" % (engine.titles[docId].split("/")[-1], score))
 
 if __name__ == "__main__":
     args = sys.argv[1:]
