@@ -1,7 +1,7 @@
 # docsearcx | A minimal document search engine.
 ![alt text](https://github.com/abdullahwaqar/docsearx/blob/master/docs/Screenshot.png "Web App Screenshot")
 
-docsearcx is a simple search engine that retrives information from ***pdfs*** based on term frequency-inverse Document frequency and cosine similarity to retrive relevant documents.
+docsearcx is a simple search engine that retrieves information from ***pdfs*** based on term frequency-inverse Document frequency and cosine similarity to retrieve relevant documents.
 
 
 ## Limitation
